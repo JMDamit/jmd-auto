@@ -2,150 +2,206 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JMD Auto | Kharghar</title>
+<title>JMD Auto | Premium Automobile Care</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background:#f4f4f4;
+:root{
+  --dark:#111111;
+  --gray:#6b7280;
+  --light:#f3f4f6;
+  --white:#ffffff;
+  --accent:#0a66c2;
+  --radius:16px;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--light);
+  color:var(--dark);
+}
+
+.wrapper{
+  max-width:560px;
+  margin:auto;
+  padding:18px;
+}
+
+.header{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:26px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+.header h1{
+  margin:0;
+  font-size:30px;
+  letter-spacing:0.6px;
+}
+
+.header p{
+  margin-top:6px;
+  color:var(--gray);
+  font-weight:500;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 16px;
+  border-radius:999px;
+  background:#e5e7eb;
+  font-size:13px;
+  font-weight:600;
+}
+
+.card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:22px;
+  margin-top:20px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  margin-top:0;
+  font-size:18px;
+}
+
+ul{
+  padding-left:18px;
   margin:0;
 }
-.container {
-  max-width:520px;
-  margin:auto;
-  background:#ffffff;
-  padding:20px;
-}
-h1 {
-  text-align:center;
-  margin-bottom:5px;
-}
-.tagline {
-  text-align:center;
-  font-weight:bold;
-  color:#555;
-}
-.section {
-  margin-top:22px;
-}
-.btn {
-  display:block;
-  text-align:center;
+
+ul li{
   margin:10px 0;
-  padding:12px;
-  background:#222;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
+  color:#1f2937;
 }
-.whatsapp {
-  background:#25D366;
-}
-.maps {
-  background:#0a66c2;
-}
-.note {
-  font-size:14px;
-  color:gray;
+
+.btn{
+  display:block;
+  width:100%;
+  padding:14px;
+  margin-top:14px;
   text-align:center;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:600;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  color:var(--dark);
+}
+
+.btn.primary{
+  background:var(--dark);
+  color:#fff;
+  border:none;
+}
+
+.btn.accent{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+}
+
+.btn.whatsapp{
+  background:#25D366;
+  color:#fff;
+  border:none;
+}
+
+.footer{
+  margin-top:28px;
+  text-align:center;
+  color:#6b7280;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<h1>JMD Auto</h1>
-<p class="tagline">Accessories | Repair | Sales & Services</p>
+<div class="wrapper">
 
-<!-- SERVICES -->
-<div class="section">
-<h3>🔧 Services / सेवाएं</h3>
-<ul>
-<li>Two & Four Wheeler Repair</li>
-<li>Automobile Accessories</li>
-<li>Genuine Spare Parts Sale</li>
-<li>General Service & Maintenance</li>
-<li>Accident Repair & Body Work</li>
-<li>Electrical & Wiring Work</li>
-</ul>
-</div>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>JMD Auto</h1>
+    <p>Accessories · Repair · Sales & Services</p>
+    <span class="badge">Open 24×7 · Slot Based Booking</span>
+  </div>
 
-<!-- FACILITIES -->
-<div class="section">
-<h3>💳 Customer Facilities / ग्राहक सुविधाएं</h3>
-<ul>
-<li>UPI & Cash Payment Accepted</li>
-<li>Experienced Mechanic (अनुभवी मैकेनिक)</li>
-<li>Quick & Reliable Service</li>
-<li>Reasonable Pricing (उचित मूल्य)</li>
-<li>Emergency Repair Support</li>
-</ul>
-</div>
+  <!-- SERVICES -->
+  <div class="card">
+    <h3>🔧 Services</h3>
+    <ul>
+      <li>Two & Four Wheeler Repair</li>
+      <li>Automobile Accessories</li>
+      <li>Genuine Spare Parts</li>
+      <li>General Service & Maintenance</li>
+      <li>Accident Repair & Body Work</li>
+      <li>Electrical & Wiring Services</li>
+    </ul>
+  </div>
 
-<!-- 24x7 INFO -->
-<div class="section">
-<h3>🕒 Working Hours / समय</h3>
-<p>
-We are open <b>24×7</b>.<br>
-Service availability depends on selected day & time slots.
-</p>
-<p>
-हम 24×7 खुले हैं।<br>
-सेवा की उपलब्धता दिन और समय के अनुसार होगी।
-</p>
+  <!-- WHY US -->
+  <div class="card">
+    <h3>⭐ Why Choose JMD Auto</h3>
+    <ul>
+      <li>Experienced & Skilled Mechanics</li>
+      <li>Quick and Reliable Service</li>
+      <li>Reasonable Pricing (उचित मूल्य)</li>
+      <li>UPI & Cash Payments Accepted</li>
+      <li>Emergency Repair Support</li>
+    </ul>
+  </div>
 
-<a class="btn" href="#" target="_blank">
-📊 Check Available Time Slots
-</a>
+  <!-- BOOKING -->
+  <div class="card">
+    <h3>📅 Service Booking</h3>
+    <p style="color:#4b5563">
+      Pre-book your vehicle service according to available days and time slots.
+    </p>
+    <a class="btn primary" href="#" target="_blank">
+      Start Service Booking
+    </a>
+    <p style="font-size:13px;color:#6b7280;margin-top:8px">
+      Booking confirmation via call or WhatsApp
+    </p>
+  </div>
 
-<p class="note">
-Available timings are updated regularly.
-</p>
-</div>
+  <!-- ADDRESS -->
+  <div class="card">
+    <h3>📍 Visit Our Workshop</h3>
+    <p>
+      Shop No. 10, Pooja Residency, Plot No. 2,<br>
+      Sector 19 Road, Kharghar,<br>
+      Navi Mumbai – 410210
+    </p>
+    <p><strong>📞</strong> 079777 14219</p>
 
-<!-- PRE BOOKING -->
-<div class="section">
-<h3>📅 Pre-Booking / प्री-बुकिंग</h3>
-<p>
-You can pre-book your vehicle service as per available timings.
-</p>
-<p>
-आप उपलब्ध समय के अनुसार अपने वाहन की पहले से बुकिंग कर सकते हैं।
-</p>
+    <a class="btn accent" href="https://www.google.com/maps/search/JMD+Auto+Kharghar">
+      Get Directions
+    </a>
+  </div>
 
-<a class="btn" href="#" target="_blank">
-📋 Start Service Booking
-</a>
+  <!-- QUICK ACTIONS -->
+  <a class="btn primary" href="tel:07977714219">Call Now</a>
+  <a class="btn whatsapp" href="https://wa.me/917977714219">WhatsApp</a>
 
-<p class="note">
-Booking confirmation will be done via call or WhatsApp.
-</p>
-</div>
-
-<!-- ADDRESS -->
-<div class="section">
-<h3>📍 Address / पता</h3>
-<p>
-Shop No. 10, Pooja Residency, Plot No. 2,<br>
-Sector 19 Road, Kharghar,<br>
-Navi Mumbai, Maharashtra – 410210
-</p>
-<p>📞 <b>Call:</b> <a href="tel:07977714219">079777 14219</a></p>
-<p>⏰ <b>Status:</b> Open 24×7</p>
-</div>
-
-<!-- ACTION BUTTONS -->
-<a class="btn" href="tel:07977714219">📞 Call Now</a>
-<a class="btn whatsapp" href="https://wa.me/917977714219">💬 WhatsApp</a>
-<a class="btn maps" href="https://www.google.com/maps/search/JMD+Auto+Kharghar">📍 Get Directions</a>
-
-<p style="text-align:center;margin-top:22px;">
-Customer Satisfaction is Our Priority<br>
-ग्राहक संतुष्टि हमारी प्राथमिकता
-</p>
+  <!-- FOOTER -->
+  <div class="footer">
+    Customer Satisfaction is Our Priority<br>
+    ग्राहक संतुष्टि हमारी प्राथमिकता
+  </div>
 
 </div>
+
 </body>
 </html>
