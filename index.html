@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JMD Auto | Premium Auto Works</title>
+<title>JMD Auto | Premium Auto Workshop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --black:#0a0a0a;
-  --dark:#111;
+  --black:#050505;
+  --dark:#0f0f0f;
   --red:#e10600;
   --text:#f5f5f5;
   --muted:#b5b5b5;
 }
 
-*{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+*{
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial,sans-serif;
+}
 
 body{
   margin:0;
-  background:linear-gradient(135deg,#050505,#141414);
+  background:linear-gradient(135deg,#000,#141414);
   color:var(--text);
 }
 
@@ -44,9 +47,9 @@ nav a{
 
 /* HERO */
 .hero{
+  min-height:90vh;
   display:flex;
   align-items:center;
-  min-height:90vh;
   padding:60px 40px;
   background:
     linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.25)),
@@ -54,8 +57,9 @@ nav a{
   background-size:cover;
   background-position:center;
 }
+
 .hero-text{
-  max-width:520px;
+  max-width:550px;
 }
 .hero-text h1{
   font-size:48px;
@@ -63,15 +67,14 @@ nav a{
 }
 .hero-text h1 span{color:var(--red)}
 .hero-text p{
-  color:var(--muted);
   font-size:18px;
-  margin:18px 0 30px;
+  color:var(--muted);
+  margin:20px 0 30px;
 }
 .hero-text a{
-  display:inline-block;
-  padding:14px 26px;
   background:var(--red);
-  color:white;
+  color:#fff;
+  padding:14px 28px;
   text-decoration:none;
   font-weight:700;
   border-radius:8px;
@@ -84,11 +87,16 @@ nav a{
 .section h2{
   text-align:center;
   font-size:32px;
-  margin-bottom:50px;
+  margin-bottom:40px;
 }
 .section h2 span{color:var(--red)}
+.section h3{
+  text-align:center;
+  color:#ccc;
+  margin:40px 0 20px;
+}
 
-/* CAR GRID */
+/* GRID */
 .cars{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -103,8 +111,8 @@ nav a{
   width:100%;
   height:260px;
   object-fit:cover;
-  transition:.4s;
   border:none;
+  transition:.4s;
 }
 .car:hover img{transform:scale(1.08)}
 .car span{
@@ -119,16 +127,16 @@ nav a{
 
 /* CTA */
 .cta{
-  background:linear-gradient(135deg,#0b0b0b,#1a1a1a);
   text-align:center;
+  background:linear-gradient(135deg,#0a0a0a,#1a1a1a);
   padding:70px 20px;
 }
 .cta h2{font-size:30px}
 .cta p{color:var(--muted);margin:14px 0 26px}
 .cta a{
-  padding:14px 28px;
   background:var(--red);
-  color:white;
+  color:#fff;
+  padding:14px 30px;
   text-decoration:none;
   font-weight:700;
   border-radius:8px;
@@ -136,10 +144,10 @@ nav a{
 
 /* FOOTER */
 footer{
+  background:#000;
   padding:30px;
   text-align:center;
   color:#aaa;
-  background:#000;
 }
 
 /* MOBILE */
@@ -156,8 +164,7 @@ footer{
 <nav>
   <h2>JMD<span>Auto</span></h2>
   <div>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#work">Our Work</a>
     <a href="#videos">Videos</a>
     <a href="tel:07977714219">Call</a>
   </div>
@@ -169,16 +176,18 @@ footer{
     <h1>Drive with <span>Confidence</span></h1>
     <p>
       Premium automobile repair, accessories & services.<br>
-      Trusted auto workshop in Kharghar, Navi Mumbai.
+      Trusted workshop in Kharghar, Navi Mumbai.
     </p>
     <a href="#">Book Appointment</a>
   </div>
 </section>
 
-<!-- LUXURY + ORDINARY CARS -->
-<section class="section" id="gallery">
+<!-- OUR WORK -->
+<section class="section" id="work">
   <h2>Our <span>Work</span></h2>
 
+  <!-- LUXURY -->
+  <h3>Luxury Cars</h3>
   <div class="cars">
     <div class="car">
       <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80">
@@ -188,13 +197,31 @@ footer{
       <img src="https://images.unsplash.com/photo-1549921296-3ecf83e52f8a?auto=format&fit=crop&w=900&q=80">
       <span>Premium Sedan</span>
     </div>
+  </div>
+
+  <!-- DAILY -->
+  <h3>Daily Cars</h3>
+  <div class="cars">
     <div class="car">
-      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80">
+      <img src="https://images.unsplash.com/photo-1626072557464-90403a3e0e4b?auto=format&fit=crop&w=900&q=80">
       <span>Daily Car Service</span>
     </div>
     <div class="car">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80">
+      <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=80">
+      <span>Regular Maintenance</span>
+    </div>
+  </div>
+
+  <!-- BIKES -->
+  <h3>Bikes & Scooters</h3>
+  <div class="cars">
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80">
       <span>Bike Repair</span>
+    </div>
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1614153077046-9f9f27d5e0bb?auto=format&fit=crop&w=900&q=80">
+      <span>Scooter Servicing</span>
     </div>
   </div>
 </section>
