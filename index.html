@@ -2,136 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>JMD Auto | Kharghar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JMD Auto</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
 body{
-  background:#020617;
+  background:#0b1320;
   color:#fff;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-  min-height:100vh;
   background:
     linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1605559424843-9e4c6c5c8a7d?auto=format&fit=crop&w=1600&q=80");
+    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;
   background-position:center;
-  display:flex;
-  align-items:center;
-  padding:40px;
-}
-
-.hero-box{
-  background:rgba(0,0,0,.65);
-  padding:40px;
+  padding:80px 8%;
   border-radius:20px;
-  max-width:720px;
+  margin:20px;
 }
 
-.hero-box h1{
-  font-size:42px;
+.hero h1{
+  font-size:48px;
   margin-bottom:15px;
 }
 
-.hero-box p{
-  font-size:16px;
+.hero p{
+  font-size:18px;
+  max-width:650px;
   line-height:1.6;
-  margin-bottom:25px;
 }
 
-.hero-buttons{
+.buttons{
+  margin-top:25px;
   display:flex;
-  flex-wrap:wrap;
   gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
   padding:14px 22px;
-  border-radius:12px;
+  border-radius:10px;
+  font-size:16px;
   font-weight:bold;
   text-decoration:none;
-  color:#000;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 }
 
-.btn.book{background:#facc15;}
-.btn.call{background:#3b82f6;color:#fff;}
-.btn.whatsapp{background:#22c55e;color:#fff;}
+.book{background:#f5b301;color:#000}
+.call{background:#2f7cff;color:#fff}
+.whatsapp{background:#25d366;color:#fff}
 
-/* SERVICES */
+/* ===== SERVICES ===== */
 .section{
-  padding:70px 40px;
-  max-width:1200px;
-  margin:auto;
+  padding:60px 8%;
 }
 
 .section h2{
   text-align:center;
-  font-size:34px;
-  margin-bottom:50px;
+  font-size:36px;
+  margin-bottom:40px;
 }
 
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:25px;
 }
 
-.service-card{
-  background:#0b1220;
+.card{
+  background:#101b33;
   padding:25px;
-  border-radius:18px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
-.service-card h3{
+.card h3{
   margin-bottom:10px;
 }
 
-.service-card p{
-  font-size:14px;
-  color:#cbd5e1;
+.card p{
+  color:#ccc;
+  font-size:15px;
+  line-height:1.5;
 }
 
-/* READY */
-.ready{
-  background:#020617;
+/* ===== CTA ===== */
+.cta{
+  background:#0f1d3d;
   text-align:center;
-  padding:70px 30px;
+  padding:50px 8%;
+  margin:40px 20px;
+  border-radius:20px;
 }
 
-.ready h2{
-  font-size:30px;
-  margin-bottom:15px;
+.cta h3{
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-.ready p{
-  color:#cbd5e1;
-  margin-bottom:30px;
+.cta p{
+  color:#ddd;
+  margin-bottom:20px;
 }
 
-.ready .hero-buttons{
-  justify-content:center;
-}
-
-/* FOOTER */
-.footer{
-  background:#000;
+/* ===== FOOTER ===== */
+footer{
   text-align:center;
-  padding:35px 20px;
+  padding:30px 10px;
+  color:#aaa;
   font-size:14px;
-  color:#cbd5e1;
 }
-
-.footer strong{color:#fff;}
 </style>
 </head>
 
@@ -139,18 +125,16 @@ body{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-box">
-    <h1>JMD Auto</h1>
-    <p>
-      Premium Automobile Repair, Accessories, Sales & Services<br>
-      Trusted workshop in Kharghar, Navi Mumbai
-    </p>
+  <h1>JMD Auto</h1>
+  <p>
+    Premium Automobile Repair, Accessories, Sales & Services<br>
+    Trusted workshop in Kharghar, Navi Mumbai
+  </p>
 
-    <div class="hero-buttons">
-      <a href="#" class="btn book">📅 Book Appointment</a>
-      <a href="tel:07977714219" class="btn call">📞 Call Now</a>
-      <a href="https://wa.me/917977714219" class="btn whatsapp">💬 WhatsApp</a>
-    </div>
+  <div class="buttons">
+    <a href="#" class="btn book">📅 Book Appointment</a>
+    <a href="tel:07977714219" class="btn call">📞 Call Now</a>
+    <a href="https://wa.me/917977714219" class="btn whatsapp">💬 WhatsApp</a>
   </div>
 </section>
 
@@ -159,49 +143,49 @@ body{
   <h2>Our Services</h2>
 
   <div class="services">
-    <div class="service-card">
+    <div class="card">
       <h3>🔧 General Service</h3>
       <p>Complete vehicle inspection & maintenance</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>🛢️ Oil Change</h3>
       <p>High quality engine oil replacement</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>⚙️ Engine Repair</h3>
       <p>Expert diagnosis & repair</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>🔋 Battery</h3>
       <p>Battery check & replacement</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>🚗 Accessories</h3>
       <p>Genuine automobile accessories</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>🛠️ Body Work</h3>
       <p>Accident repair & body restoration</p>
     </div>
   </div>
 </section>
 
-<!-- READY -->
-<section class="ready">
-  <h2>Ready to Service Your Vehicle?</h2>
+<!-- CTA -->
+<section class="cta">
+  <h3>Ready to Service Your Vehicle?</h3>
   <p>Open 24×7 · Reasonable Pricing (उचित मूल्य)</p>
 
-  <div class="hero-buttons">
+  <div class="buttons" style="justify-content:center">
     <a href="#" class="btn book">Book Service Slot</a>
-    <a href="#" class="btn call">Visit Us</a>
+    <a href="tel:07977714219" class="btn call">Visit Us</a>
   </div>
 
-  <p style="margin-top:25px">
+  <p style="margin-top:20px;font-size:15px;">
     Shop No. 10, Pooja Residency, Plot No. 2,<br>
     Sector 19 Road, Kharghar,<br>
     Navi Mumbai – 410210<br>
@@ -209,9 +193,8 @@ body{
   </p>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  © JMD Auto · <strong>Customer Satisfaction is Our Priority</strong><br>
+<footer>
+  © JMD Auto · Customer Satisfaction is Our Priority<br>
   ग्राहक संतुष्टि हमारी प्राथमिकता
 </footer>
 
