@@ -2,236 +2,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JMD Auto | Premium Auto Repair</title>
+<title>JMD Auto | Premium Auto Works</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --bg-dark:#0b1220;
-  --bg-mid:#111827;
-  --card:#0f172a;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --accent:#f59e0b;
-  --blue:#2563eb;
-  --green:#22c55e;
-  --radius:18px;
+  --black:#0a0a0a;
+  --dark:#111;
+  --red:#e10600;
+  --text:#f5f5f5;
+  --muted:#b5b5b5;
 }
 
-*{
-  box-sizing:border-box;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-}
+*{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 
 body{
   margin:0;
-  background:linear-gradient(135deg,var(--bg-dark),var(--bg-mid));
+  background:linear-gradient(135deg,#050505,#141414);
   color:var(--text);
 }
 
-.wrapper{
-  max-width:1200px;
-  margin:auto;
-  padding:0 16px 60px;
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(8px);
+}
+nav h2 span{color:var(--red)}
+nav a{
+  color:#ddd;
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:500;
 }
 
 /* HERO */
 .hero{
-  margin-top:20px;
-  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  min-height:90vh;
+  padding:60px 40px;
   background:
-    linear-gradient( to right, rgba(0,0,0,.7), rgba(0,0,0,.2) ),
-    url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1400&q=80");
+    linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.2)),
+    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;
   background-position:center;
-  padding:70px 28px;
 }
 
-.hero h1{
-  font-size:40px;
-  margin:0;
+.hero-text{
+  max-width:520px;
 }
 
-.hero p{
-  margin:14px 0;
+.hero-text h1{
+  font-size:48px;
+  line-height:1.2;
+}
+.hero-text h1 span{color:var(--red)}
+
+.hero-text p{
+  color:var(--muted);
   font-size:18px;
-  color:#d1d5db;
-  max-width:600px;
+  margin:18px 0 30px;
 }
 
-.hero .btn-group{
-  margin-top:26px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-/* BUTTONS */
-.btn{
-  padding:14px 22px;
-  border-radius:12px;
+.hero-text a{
+  display:inline-block;
+  padding:14px 26px;
+  background:var(--red);
+  color:white;
   text-decoration:none;
   font-weight:700;
-  display:inline-block;
+  border-radius:8px;
 }
 
-.btn.primary{
-  background:var(--accent);
-  color:#111;
-}
-
-.btn.call{
-  background:var(--blue);
-  color:#fff;
-}
-
-.btn.whatsapp{
-  background:var(--green);
-  color:#fff;
-}
-
-/* SECTIONS */
+/* LUXURY SECTION */
 .section{
-  margin-top:48px;
+  padding:80px 40px;
 }
 
 .section h2{
   text-align:center;
-  font-size:28px;
-  margin-bottom:26px;
+  font-size:32px;
+  margin-bottom:50px;
 }
+.section h2 span{color:var(--red)}
 
-/* SERVICES GRID */
-.grid{
+.cars{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
 }
 
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:24px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,.35);
+.car{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
 }
-
-.card h3{
-  margin:12px 0 6px;
+.car img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:.4s;
 }
+.car:hover img{transform:scale(1.08)}
 
-.card p{
-  color:var(--muted);
+.car span{
+  position:absolute;
+  bottom:14px;
+  left:14px;
+  background:rgba(0,0,0,.65);
+  padding:6px 12px;
+  border-radius:6px;
   font-size:14px;
 }
 
-/* CTA STRIP */
+/* CTA */
 .cta{
-  margin-top:50px;
-  background:linear-gradient(135deg,#020617,#020617);
-  border-radius:var(--radius);
-  padding:36px;
+  background:linear-gradient(135deg,#0b0b0b,#1a1a1a);
   text-align:center;
+  padding:70px 20px;
 }
-
-.cta h2{
-  margin:0 0 12px;
-}
-
-.cta p{
-  color:#cbd5f5;
+.cta h2{font-size:30px}
+.cta p{color:var(--muted);margin:14px 0 26px}
+.cta a{
+  padding:14px 28px;
+  background:var(--red);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:8px;
 }
 
 /* FOOTER */
-.footer{
-  margin-top:50px;
+footer{
+  padding:30px;
   text-align:center;
-  color:#9ca3af;
-  font-size:14px;
+  color:#aaa;
+  background:#000;
 }
 
-/* RESPONSIVE */
-@media(max-width:600px){
-  .hero h1{font-size:30px;}
+/* MOBILE */
+@media(max-width:768px){
+  .hero{padding:40px 20px}
+  .hero-text h1{font-size:36px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<nav>
+  <h2>JMD<span>Auto</span></h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>JMD Auto</h1>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Drive with <span>Confidence</span></h1>
     <p>
-      Premium Automobile Repair, Accessories, Sales & Services  
-      <br>Trusted workshop in Kharghar, Navi Mumbai
+      Premium automobile repair, accessories & services.<br>
+      Trusted auto workshop in Kharghar, Navi Mumbai.
     </p>
+    <a href="#">Book Appointment</a>
+  </div>
+</section>
 
-    <div class="btn-group">
-      <a href="#" class="btn primary">📅 Book Appointment</a>
-      <a href="tel:07977714219" class="btn call">📞 Call Now</a>
-      <a href="https://wa.me/917977714219" class="btn whatsapp">💬 WhatsApp</a>
+<section class="section">
+  <h2>Luxury Cars We <span>Serve</span></h2>
+  <div class="cars">
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80">
+      <span>Sports Performance</span>
+    </div>
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=900&q=80">
+      <span>Premium Sedan</span>
+    </div>
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80">
+      <span>Luxury Supercar</span>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <div class="section">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🔧 General Service</h3>
-        <p>Complete vehicle inspection & maintenance</p>
-      </div>
-      <div class="card">
-        <h3>🛢️ Oil Change</h3>
-        <p>High quality engine oil replacement</p>
-      </div>
-      <div class="card">
-        <h3>⚙️ Engine Repair</h3>
-        <p>Expert diagnosis & repair</p>
-      </div>
-      <div class="card">
-        <h3>🔋 Battery</h3>
-        <p>Battery check & replacement</p>
-      </div>
-      <div class="card">
-        <h3>🚗 Accessories</h3>
-        <p>Genuine automobile accessories</p>
-      </div>
-      <div class="card">
-        <h3>🛠️ Body Work</h3>
-        <p>Accident repair & body restoration</p>
-      </div>
-    </div>
-  </div>
+<section class="cta">
+  <h2>24×7 Service Available</h2>
+  <p>Reasonable Pricing (उचित मूल्य) · Emergency Support</p>
+  <a href="tel:07977714219">Call Now</a>
+</section>
 
-  <!-- CTA -->
-  <div class="cta">
-    <h2>Ready to Service Your Vehicle?</h2>
-    <p>Open 24×7 · Reasonable Pricing (उचित मूल्य)</p>
-    <a href="#" class="btn primary">Book Service Slot</a>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Visit Us</h2>
-    <p style="text-align:center;color:#cbd5f5">
-      Shop No. 10, Pooja Residency, Plot No. 2,<br>
-      Sector 19 Road, Kharghar,<br>
-      Navi Mumbai – 410210<br>
-      📞 079777 14219
-    </p>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    © JMD Auto · Customer Satisfaction is Our Priority  
-    <br>ग्राहक संतुष्टि हमारी प्राथमिकता
-  </div>
-
-</div>
+<footer>
+  © JMD Auto · Kharghar, Navi Mumbai<br>
+  ग्राहक संतुष्टि हमारी प्राथमिकता
+</footer>
 
 </body>
 </html>
