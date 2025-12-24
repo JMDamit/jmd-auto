@@ -1,109 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JMD Auto | Premium Auto Repair</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>JMD Auto | Premium Auto Repair</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: radial-gradient(circle at top, #0f1b2d, #020409);
-      color: #ffffff;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#05080e;
+  color:#fff;
+}
 
-    /* ================= HERO SECTION ================= */
-    .hero {
-      background: url("hero-black-car.jpg") center center / cover no-repeat;
-      margin: 25px;
-      border-radius: 22px;
-      min-height: 460px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.85);
-    }
+/* ================= HERO ================= */
+.hero{
+  position:relative; /* 🔥 IMPORTANT */
+  background:url("hero-black-car.jpg") center/cover no-repeat;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  padding:60px;
+  overflow:hidden;
+}
 
-    .hero-overlay {
-      background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.75) 0%,
-        rgba(0,0,0,0.55) 50%,
-        rgba(0,0,0,0.25) 100%
-      );
-      padding: 40px;
-      border-radius: 18px;
-      max-width: 760px;
-    }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.25)
+  );
+  z-index:1;
+}
 
-    .hero h1 {
-      font-size: 46px;
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
+.hero-content{
+  position:relative;
+  z-index:2; /* 🔥 BUTTONS VISIBLE */
+  max-width:700px;
+}
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #e5e5e5;
-    }
+.hero h1{
+  font-size:48px;
+  margin:0 0 10px;
+}
 
-    .hero-buttons {
-      margin-top: 26px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+  color:#ddd;
+}
 
-    .btn {
-      padding: 14px 22px;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      text-decoration: none;
-    }
+/* ================= BUTTONS ================= */
+.btns{
+  margin-top:25px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-    .btn.yellow { background: #f5b400; color: #000; }
-    .btn.blue   { background: #3b82f6; color: #fff; }
-    .btn.green  { background: #22c55e; color: #fff; }
+.btn{
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
 
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 768px) {
-      .hero {
-        margin: 15px;
-        min-height: 420px;
-      }
+.yellow{background:#f5b400;color:#000;}
+.blue{background:#2563eb;color:#fff;}
+.green{background:#22c55e;color:#fff;}
 
-      .hero h1 {
-        font-size: 34px;
-      }
+/* ================= OUR WORK ================= */
+section{
+  padding:70px 40px;
+  max-width:1200px;
+  margin:auto;
+}
 
-      .hero-overlay {
-        padding: 25px;
-      }
-    }
-  </style>
+h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:50px;
+}
+
+.work{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.work-card{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+.work-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.work-card span{
+  position:absolute;
+  bottom:15px;
+  left:15px;
+  background:rgba(0,0,0,.7);
+  padding:8px 14px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  .hero{padding:30px}
+  .hero h1{font-size:34px}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>JMD Auto</h1>
-      <p>
-        Premium Automobile Repair, Accessories, Sales & Services<br>
-        Trusted workshop in Kharghar, Navi Mumbai
-      </p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>JMD Auto</h1>
+    <p>
+      Premium Automobile Repair, Accessories, Sales & Services<br>
+      Trusted workshop in Kharghar, Navi Mumbai
+    </p>
 
-      <div class="hero-buttons">
-        <a href="#booking" class="btn yellow">📅 Book Appointment</a>
-        <a href="tel:+917977714219" class="btn blue">📞 Call Now</a>
-        <a href="https://wa.me/917977714219" class="btn green">💬 WhatsApp</a>
-      </div>
+    <!-- 🔥 BUTTONS BACK -->
+    <div class="btns">
+      <a href="#booking" class="btn yellow">📅 Book Appointment</a>
+      <a href="tel:+917977714219" class="btn blue">📞 Call Now</a>
+      <a href="https://wa.me/917977714219" class="btn green">💬 WhatsApp</a>
     </div>
-  </section>
+  </div>
+</div>
+
+<!-- OUR WORK -->
+<section>
+  <h2>Our <span style="color:#f00">Work</span></h2>
+
+  <div class="work">
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738">
+      <span>Luxury Cars</span>
+    </div>
+
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
+      <span>Daily Cars</span>
+    </div>
+
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+      <span>Bikes & Scooters</span>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
