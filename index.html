@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JMD Auto | Premium Automobile Care</title>
+<title>JMD Auto | Premium Auto Repair</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --dark:#0f172a;
-  --gray:#64748b;
-  --light:#f8fafc;
-  --white:#ffffff;
-  --accent:#2563eb;
+  --bg-dark:#0b1220;
+  --bg-mid:#111827;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#f59e0b;
+  --blue:#2563eb;
+  --green:#22c55e;
   --radius:18px;
 }
 
@@ -22,104 +25,134 @@
 
 body{
   margin:0;
-  min-height:100vh;
-  background:
-    linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #334155 100%);
-  color:var(--dark);
+  background:linear-gradient(135deg,var(--bg-dark),var(--bg-mid));
+  color:var(--text);
 }
 
 .wrapper{
-  max-width:560px;
+  max-width:1200px;
   margin:auto;
-  padding:22px 16px 40px;
+  padding:0 16px 60px;
 }
 
-.header{
-  background:linear-gradient(135deg,#ffffff,#f1f5f9);
+/* HERO */
+.hero{
+  margin-top:20px;
   border-radius:var(--radius);
-  padding:28px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,0.18);
+  background:
+    linear-gradient( to right, rgba(0,0,0,.7), rgba(0,0,0,.2) ),
+    url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1400&q=80");
+  background-size:cover;
+  background-position:center;
+  padding:70px 28px;
 }
 
-.header h1{
+.hero h1{
+  font-size:40px;
   margin:0;
-  font-size:30px;
-  letter-spacing:0.6px;
 }
 
-.header p{
-  margin-top:6px;
-  color:var(--gray);
-  font-weight:600;
-}
-
-.badge{
-  display:inline-block;
-  margin-top:14px;
-  padding:8px 18px;
-  border-radius:999px;
-  background:#e2e8f0;
-  font-size:13px;
-  font-weight:700;
-}
-
-.card{
-  background:var(--white);
-  border-radius:var(--radius);
-  padding:22px;
-  margin-top:22px;
-  box-shadow:0 16px 36px rgba(0,0,0,0.18);
-}
-
-.card h3{
-  margin-top:0;
+.hero p{
+  margin:14px 0;
   font-size:18px;
+  color:#d1d5db;
+  max-width:600px;
 }
 
-ul{
-  padding-left:18px;
-  margin:0;
+.hero .btn-group{
+  margin-top:26px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-ul li{
-  margin:10px 0;
-  color:#1f2937;
-}
-
+/* BUTTONS */
 .btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  margin-top:14px;
-  text-align:center;
+  padding:14px 22px;
+  border-radius:12px;
   text-decoration:none;
-  border-radius:14px;
   font-weight:700;
-  border:none;
-  cursor:pointer;
+  display:inline-block;
 }
 
 .btn.primary{
-  background:linear-gradient(135deg,#020617,#1e293b);
-  color:#fff;
+  background:var(--accent);
+  color:#111;
 }
 
-.btn.accent{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+.btn.call{
+  background:var(--blue);
   color:#fff;
 }
 
 .btn.whatsapp{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
+  background:var(--green);
   color:#fff;
 }
 
-.footer{
-  margin-top:30px;
+/* SECTIONS */
+.section{
+  margin-top:48px;
+}
+
+.section h2{
   text-align:center;
-  color:#e5e7eb;
+  font-size:28px;
+  margin-bottom:26px;
+}
+
+/* SERVICES GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.card h3{
+  margin:12px 0 6px;
+}
+
+.card p{
+  color:var(--muted);
   font-size:14px;
+}
+
+/* CTA STRIP */
+.cta{
+  margin-top:50px;
+  background:linear-gradient(135deg,#020617,#020617);
+  border-radius:var(--radius);
+  padding:36px;
+  text-align:center;
+}
+
+.cta h2{
+  margin:0 0 12px;
+}
+
+.cta p{
+  color:#cbd5f5;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:50px;
+  text-align:center;
+  color:#9ca3af;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h1{font-size:30px;}
 }
 </style>
 </head>
@@ -128,75 +161,74 @@ ul li{
 
 <div class="wrapper">
 
-  <!-- HEADER -->
-  <div class="header">
+  <!-- HERO -->
+  <div class="hero">
     <h1>JMD Auto</h1>
-    <p>Accessories · Repair · Sales & Services</p>
-    <span class="badge">Open 24×7 · Slot Based Booking</span>
+    <p>
+      Premium Automobile Repair, Accessories, Sales & Services  
+      <br>Trusted workshop in Kharghar, Navi Mumbai
+    </p>
+
+    <div class="btn-group">
+      <a href="#" class="btn primary">📅 Book Appointment</a>
+      <a href="tel:07977714219" class="btn call">📞 Call Now</a>
+      <a href="https://wa.me/917977714219" class="btn whatsapp">💬 WhatsApp</a>
+    </div>
   </div>
 
   <!-- SERVICES -->
-  <div class="card">
-    <h3>🔧 Services</h3>
-    <ul>
-      <li>Two & Four Wheeler Repair</li>
-      <li>Automobile Accessories</li>
-      <li>Genuine Spare Parts</li>
-      <li>General Service & Maintenance</li>
-      <li>Accident Repair & Body Work</li>
-      <li>Electrical & Wiring Services</li>
-    </ul>
+  <div class="section">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🔧 General Service</h3>
+        <p>Complete vehicle inspection & maintenance</p>
+      </div>
+      <div class="card">
+        <h3>🛢️ Oil Change</h3>
+        <p>High quality engine oil replacement</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Engine Repair</h3>
+        <p>Expert diagnosis & repair</p>
+      </div>
+      <div class="card">
+        <h3>🔋 Battery</h3>
+        <p>Battery check & replacement</p>
+      </div>
+      <div class="card">
+        <h3>🚗 Accessories</h3>
+        <p>Genuine automobile accessories</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Body Work</h3>
+        <p>Accident repair & body restoration</p>
+      </div>
+    </div>
   </div>
 
-  <!-- WHY US -->
-  <div class="card">
-    <h3>⭐ Why Choose JMD Auto</h3>
-    <ul>
-      <li>Experienced & Skilled Mechanics</li>
-      <li>Quick and Reliable Service</li>
-      <li>Reasonable Pricing (उचित मूल्य)</li>
-      <li>UPI & Cash Payments Accepted</li>
-      <li>Emergency Repair Support</li>
-    </ul>
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Ready to Service Your Vehicle?</h2>
+    <p>Open 24×7 · Reasonable Pricing (उचित मूल्य)</p>
+    <a href="#" class="btn primary">Book Service Slot</a>
   </div>
 
-  <!-- BOOKING -->
-  <div class="card">
-    <h3>📅 Service Booking</h3>
-    <p style="color:#475569">
-      Pre-book your vehicle service according to available days and time slots.
-    </p>
-    <a class="btn primary" href="#" target="_blank">
-      Start Service Booking
-    </a>
-    <p style="font-size:13px;color:#64748b;margin-top:8px">
-      Booking confirmation via call or WhatsApp
-    </p>
-  </div>
-
-  <!-- ADDRESS -->
-  <div class="card">
-    <h3>📍 Visit Our Workshop</h3>
-    <p>
+  <!-- CONTACT -->
+  <div class="section">
+    <h2>Visit Us</h2>
+    <p style="text-align:center;color:#cbd5f5">
       Shop No. 10, Pooja Residency, Plot No. 2,<br>
       Sector 19 Road, Kharghar,<br>
-      Navi Mumbai – 410210
+      Navi Mumbai – 410210<br>
+      📞 079777 14219
     </p>
-    <p><strong>📞</strong> 079777 14219</p>
-
-    <a class="btn accent" href="https://www.google.com/maps/search/JMD+Auto+Kharghar">
-      Get Directions
-    </a>
   </div>
-
-  <!-- QUICK ACTIONS -->
-  <a class="btn primary" href="tel:07977714219">Call Now</a>
-  <a class="btn whatsapp" href="https://wa.me/917977714219">WhatsApp</a>
 
   <!-- FOOTER -->
   <div class="footer">
-    Customer Satisfaction is Our Priority<br>
-    ग्राहक संतुष्टि हमारी प्राथमिकता
+    © JMD Auto · Customer Satisfaction is Our Priority  
+    <br>ग्राहक संतुष्टि हमारी प्राथमिकता
   </div>
 
 </div>
