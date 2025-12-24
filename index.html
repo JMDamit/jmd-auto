@@ -2,62 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JMD Auto | Premium Automobile Services</title>
+<title>JMD Auto | Premium Car & Bike Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
 body{
-  background: radial-gradient(circle at top, #0c1a2b, #000);
+  background:#0b1220;
   color:#fff;
-  overflow-x:hidden;
 }
 
-/* ---------- HERO SECTION ---------- */
+/* HERO */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:60px;
+  min-height:90vh;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
-    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c3?auto=format&fit=crop&w=1920&q=80");
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;
   background-position:center;
+  display:flex;
+  align-items:center;
+  padding:40px;
 }
-
 .hero-box{
-  max-width:650px;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,.6);
   padding:40px;
   border-radius:20px;
+  max-width:650px;
 }
-
 .hero h1{
   font-size:48px;
   margin-bottom:15px;
 }
-
 .hero p{
   font-size:18px;
   line-height:1.6;
-  color:#ddd;
+  opacity:.9;
 }
-
-/* ---------- BUTTONS ---------- */
-.btns{
+.buttons{
   margin-top:25px;
   display:flex;
   gap:15px;
   flex-wrap:wrap;
 }
-
 .btn{
   padding:14px 22px;
   border-radius:12px;
@@ -67,52 +54,54 @@ body{
   align-items:center;
   gap:8px;
 }
+.book{background:#f5b301;color:#000}
+.call{background:#2f7bff;color:#fff}
+.whatsapp{background:#25d366;color:#fff}
 
-.book{ background:#f4b400; color:#000; }
-.call{ background:#4285f4; color:#fff; }
-.whatsapp{ background:#25d366; color:#fff; }
-
-/* ---------- SERVICES ---------- */
-.services{
-  padding:80px 60px;
-  text-align:center;
+/* SECTION */
+.section{
+  padding:70px 40px;
 }
-
-.services h2{
+.section h2{
+  text-align:center;
   font-size:36px;
   margin-bottom:40px;
 }
 
-.service-grid{
+/* SERVICES */
+.services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
-
 .card{
-  background:#0e1b2e;
+  background:#121a2f;
   padding:30px;
   border-radius:18px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.6);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s;
 }
-
+.card:hover{transform:translateY(-6px)}
 .card h3{
   margin-bottom:10px;
 }
-
 .card p{
-  font-size:14px;
-  color:#ccc;
+  font-size:15px;
+  opacity:.85;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media(max-width:768px){
-  .hero{
-    padding:30px;
-  }
-  .hero h1{
-    font-size:34px;
-  }
+/* FOOTER */
+footer{
+  background:#060b16;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  opacity:.8;
+}
+
+@media(max-width:600px){
+  .hero h1{font-size:34px}
+  .hero-box{padding:25px}
 }
 </style>
 </head>
@@ -125,43 +114,57 @@ body{
     <h1>JMD Auto</h1>
     <p>
       Premium Automobile Repair, Accessories, Sales & Services<br>
-      Trusted workshop in Kharghar, Navi Mumbai
+      Trusted workshop in <b>Kharghar, Navi Mumbai</b>
     </p>
 
-    <div class="btns">
-      <a class="btn book" href="#">📅 Book Appointment</a>
-      <a class="btn call" href="tel:+919999999999">📞 Call Now</a>
-      <a class="btn whatsapp" href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a>
+    <div class="buttons">
+      <a class="btn book" href="#services">📅 Book Appointment</a>
+      <a class="btn call" href="tel:+917977714219">📞 Call Now</a>
+      <a class="btn whatsapp" href="https://wa.me/917977714219" target="_blank">💬 WhatsApp</a>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section class="section" id="services">
   <h2>Our Services</h2>
 
-  <div class="service-grid">
+  <div class="services">
     <div class="card">
-      <h3>General Service</h3>
-      <p>Complete vehicle inspection & maintenance.</p>
+      <h3>🔧 General Service</h3>
+      <p>Complete inspection & regular maintenance for cars & bikes.</p>
     </div>
 
     <div class="card">
-      <h3>Oil Change</h3>
-      <p>High quality engine oil replacement.</p>
+      <h3>🛢 Oil Change</h3>
+      <p>High quality engine oil replacement for smooth performance.</p>
     </div>
 
     <div class="card">
-      <h3>Engine Repair</h3>
-      <p>Expert diagnostics & repair services.</p>
+      <h3>⚙ Engine Repair</h3>
+      <p>Expert diagnostics & engine repair for all vehicle types.</p>
     </div>
 
     <div class="card">
-      <h3>Battery Service</h3>
-      <p>Battery check & replacement.</p>
+      <h3>🔋 Battery Service</h3>
+      <p>Battery check, jump start & replacement services.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚘 Car Wash & Detailing</h3>
+      <p>Premium exterior & interior car wash with detailing.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏍 Bike & Scooter Repair</h3>
+      <p>Daily bikes & scooters servicing with genuine parts.</p>
     </div>
   </div>
 </section>
+
+<footer>
+© 2025 JMD Auto – Kharghar, Navi Mumbai
+</footer>
 
 </body>
 </html>
